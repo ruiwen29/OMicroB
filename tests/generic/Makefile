@@ -6,7 +6,7 @@ TARGETS := test.byte test.c test.elf test.hex
 all: $(TARGETS)
 
 $(TARGETS): $(SOURCES)
-	$(BIN)/omicrob -v $^ -mlopt -verbose -stack-size 200 -heap-size 200 -o test.elf
+	$(BIN)/omicrob -device=microbit -v $^ -mlopt -verbose -stack-size 200 -heap-size 200 -o test.elf
 
 clean:
 	@rm -f *.cmo *.cmi
