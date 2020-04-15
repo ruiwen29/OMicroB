@@ -6,7 +6,7 @@ TARGETS := buzzer.byte buzzer.c buzzer.elf buzzer.avr buzzer.hex
 all: $(TARGETS)
 
 $(TARGETS): $(SOURCES)
-	$(BIN)/omicrob -device arduboy -v $^ -mlopt -verbose -stack-size 32 -heap-size 32
+	$(BIN)/omicrob -device=arduboy -v $^ -mlopt -verbose -stack-size 32 -heap-size 32
 
 flash: buzzer.hex
 	$(BIN)/omicrob -device arduboy -flash -sudo $<
